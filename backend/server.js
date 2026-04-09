@@ -10,6 +10,9 @@ app.get("/", (req, res) => {
   res.status(200).send({ message: "Welcome to the Support Desk API" });
 });
 
+// Routes
+app.use("/api/users", require("./routes/userRoutes"));
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
